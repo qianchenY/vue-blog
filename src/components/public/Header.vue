@@ -19,10 +19,10 @@
 						<a class="current" href="" title="">首页</a>
 					</li>
 					<li class="hd-nav-item" v-for="item in navbar">
-						<a href="" title="">{{ item.name }}</a>
+						<a href="" :title="item.name">{{ item.name }}</a>
 						<ul class="hd-subnav" v-if="item.child">
 							<li class="hd-subnav-item" v-for="citem in item.child">
-								<a href="" title="">{{ citem.name }}</a>
+								<a href="" :title="citem.name">{{ citem.name }}</a>
 							</li>
 						</ul>
 					</li>
@@ -46,7 +46,7 @@ export default {
 		...mapState(["navbar"])
 	},
 	mounted(){
-		$(".hd-nav-item li").hover(function(e){
+		$(".hd-nav-list li").hover(function(e){
 			var _this = $(this),
 				$a = _this.children("a"),
 				$list = _this.children("ul")
@@ -65,6 +65,8 @@ export default {
 
 <style lang="scss" scoped>
 	.hd{
+		position: relative;
+		z-index: 2;
 		background-color: $color;
 	}
 
@@ -81,7 +83,7 @@ export default {
 			position: relative;
 			color: #fff;
 			font-size: 54px;
-			text-shadow: 0 0 1px rgba(0,0,0,0.8);
+			text-shadow: 0 0 1px rgba(66,154,171,0.8);
 			letter-spacing: -2px;
 			@include transition;
 		}
@@ -92,7 +94,7 @@ export default {
 			color: #fff;
 			font-weight: normal;
 			font-size: 24px;
-			text-shadow: 0 0 1px rgba(0,0,0,0.8);
+			text-shadow: 0 0 1px rgba(66,154,171,0.8);
 			letter-spacing: 1px;
 			z-index: 2;			
 			@include transition;
@@ -110,6 +112,8 @@ export default {
 	}
 
 	.hd-nav{
+		position: relative;
+		z-index: 9;
 		background-color: $color2;
 	}
 
