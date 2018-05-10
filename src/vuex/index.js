@@ -3,6 +3,9 @@ import vuex from 'vuex'
 vue.use(vuex)
 
 const state = {
+    options: {
+		defaultImg: require('../assets/img/timthumb.jpg')
+	},
     navbar: [{
         id: 0,
         name: "前端",

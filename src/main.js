@@ -5,6 +5,9 @@ import App from './App'
 import router from './router'
 import store from './vuex'
 
+// 引入字体图标
+import 'font-awesome/css/font-awesome.min.css'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

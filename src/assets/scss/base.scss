@@ -215,6 +215,12 @@ em,i{
     }
 }
 
+.mr-5{
+    margin: {
+        right: 5px;
+    };
+}
+
 .mt-none{
     margin: {
         top: 0 !important;
@@ -411,3 +417,172 @@ em,i{
         }
     }    
 }
+
+.main{
+    position: relative;
+    z-index: 2;
+    margin: {
+        top: 30px;
+        bottom: 30px;
+    };
+}
+
+// .m-left start
+.m-left{
+    float: left;
+    width: get_w(800);
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 959px){
+    .m-left{
+        float: none;
+        width: 100%;
+    }
+}
+// .m-left end
+
+// .m-right start
+.m-right{
+    float: right;
+    width: get_w(360);
+    box-sizing: border-box;
+}
+
+.m-right-box{
+    margin-top: 15px;
+    background-color: white;
+    padding: 10px;
+    overflow: hidden;    
+
+    .box-hd{
+        position: relative;
+        padding-bottom: 10px;
+        line-height: 1.2;
+        @include font-size(16);
+        color: #333;
+        border-bottom: 1px solid #ccc;
+
+        span{
+            color: #333;
+            cursor: pointer;
+
+            &:hover{
+                color: $color;
+            }
+        }
+
+        &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            display: block;
+            width: 70px;
+            height: 3px;
+            background-color: $color;
+        }
+    }
+
+    .box-bd{
+        margin: {
+            top: 15px
+        };
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 959px){
+    .m-right{
+        float: none;
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+// .m-right end
+// .mr-guidang start
+.mr-guidang-list{
+    overflow: hidden;
+    font-size: 0;
+    letter-spacing: 0;
+
+    .list-item{
+        margin: {
+            top: 5px;
+            bottom: 5px;
+            left: 1%;
+            right: 1%;
+        };
+        vertical-align: top;
+        @include inline-block();
+        width: 48%;
+        line-height: 20px;
+        @include font-size(13);
+        color: #666;
+
+        a{
+            color: #666;
+
+            &:hover{
+                color: $color;
+            }
+        }
+    }
+}
+// .mr-guidang end
+// .mr-hotpost start
+.mr-hotpost-list{
+    overflow: hidden;
+
+    .list-item{
+        margin: {
+            top: 15px;
+        };
+        overflow: hidden;
+
+        .item-pic{
+            float: left;
+            width: 100px;
+        }
+
+        .item-font{
+            padding: {
+                left: 8px;
+            };
+            overflow: hidden;
+        }
+
+        .item-title{
+            height: 24px;
+            line-height: 24px;
+            @include font-size(14);
+            color: #333;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            a{
+                color: #333;
+
+                &:hover{
+                    color: $color;
+                }
+            }
+        }
+
+        .item-time{
+            margin-top: 10px;
+            line-height: 20px;
+            @include font-size(13);
+            color: #666;
+        }
+
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+}
+// .mr-hotpost end

@@ -4,25 +4,25 @@
         <div class="ft-top box">
             <ul class="ft-nav">
                 <li class="ft-nav-item">
-                    <a href="" title="">首页</a>
+                    <router-link to="" title="">首页</router-link>
                 </li>
                 <li class="ft-nav-item" v-for="item in navbar">
-                    <a href="" :title="item.name">{{ item.name }}</a>
+                    <router-link to="" :title="item.name">{{ item.name }}</router-link>
                 </li>
             </ul>
             <p class="ft-info">
                 <span>Copyrights &copy; 2016-2017 千辰的个人博客 ICP8008208820DHC</span>
-                <a href="" title="" target="_blank">网站地图</a>
+                <router-link to="" title="" target="_blank">网站地图</router-link>
             </p>
         </div>
         <div class="linklist" v-if="$route.name == 'Home'">
             <ul class="overflow box">
                 <li>友情链接：</li>
                 <li>
-                    <a href="" title="">链接</a>
+                    <router-link to="" title="">链接</router-link>
                 </li>
                 <li>
-                    <a href="" title="">链接</a>
+                    <router-link to="" title="">链接</router-link>
                 </li>
             </ul>
         </div>

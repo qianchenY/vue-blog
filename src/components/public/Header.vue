@@ -2,27 +2,27 @@
 	<div id="Header">
 		<div class="hd">
 			<div class="hd-box box">
-				<a class="hd-title" href="/" title="">
+				<router-link class="hd-title" to="/" title="">
 					<span class="big">
 						明夜
 					</span>
 					<span class="small">
 						千辰的个人博客
 					</span>
-				</a>
+				</router-link>
 			</div>
 		</div>
 		<div class="hd-nav">
 			<div class="hd-nav-box box">
 				<ul class="hd-nav-list">
 					<li class="hd-nav-item">
-						<a class="current" href="" title="">首页</a>
+						<router-link class="current" to="" title="">首页</router-link>
 					</li>
 					<li class="hd-nav-item" v-for="item in navbar">
-						<a href="" :title="item.name">{{ item.name }}</a>
+						<router-link to="" :title="item.name">{{ item.name }}</router-link>
 						<ul class="hd-subnav" v-if="item.child">
 							<li class="hd-subnav-item" v-for="citem in item.child">
-								<a href="" :title="citem.name">{{ citem.name }}</a>
+								<router-link to="" :title="citem.name">{{ citem.name }}</router-link>
 							</li>
 						</ul>
 					</li>
