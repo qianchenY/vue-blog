@@ -19,15 +19,19 @@
                         </span>
                         <span class="mr-5">
                             <i class="fa fa-eye"></i>
-                            {{ item.eyes }}浏览
+                            {{ item.eyes }} 浏览
                         </span>
                         <router-link class="mr-5" to="" title="">
                             <i class="fa fa-comments-o"></i>
-                            {{ item.comments }}评论
+                            {{ item.comments }} 评论
+                        </router-link>
+                        <router-link class="mr-5" to="" title="">
+                            <i class="fa fa-heart-o"></i>
+                            {{ item.hearts }} 喜欢
                         </router-link>
                         <router-link to="" title="">
-                            <i class="fa fa-heart-o"></i>
-                            {{ item.hearts }}喜欢
+                            <i class="fa fa-tag"></i>
+                            {{ item.tags }}
                         </router-link>
                     </p> 
                 </div>

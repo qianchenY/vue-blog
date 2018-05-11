@@ -10,6 +10,11 @@ import 'font-awesome/css/font-awesome.min.css'
 
 Vue.config.productionTip = false
 
+router.beforeEach((to,from, next)=>{
+    document.getElementsByTagName('title')[0].innerHTML = to.meta.title || to.name;
+    next()
+})
+
 /* eslint-disable no-new */
 new Vue({
 	el: '#app',

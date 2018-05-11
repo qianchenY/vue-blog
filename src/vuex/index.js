@@ -9,49 +9,54 @@ const state = {
     navbar: [{
         id: 0,
         name: "前端",
-        url: "qianduan",
+        url: "/list/qianduan",
         child: [{
             id: 3,
             name: "JavaScript",
-            url: "js"
+            url: "/list/js"
           },
           {
             id: 4,
             name: "HTML+CSS",
-            url: "htmlcss"
+            url: "/list/htmlcss"
           },
           {
             id: 5,
             name: "nodeJS",
-            url: "nodeks"
+            url: "/list/nodeks"
           },
           {
             id: 6,
             name: "Vue",
-            url: "vue"
+            url: "/list/vue"
           }
         ]
       },
       {
         id: 1,
         name: "后端",
-        url: "houduan",
+        url: "/list/houduan",
         child: [{
             id: 7,
             name: "PHP",
-            url: "php"
+            url: "/list/php"
           },
           {
             id: 8,
             name: "Python",
-            url: "python"
+            url: "/list/python"
           }
         ]
       },
       {
         id: 2,
         name: "杂谈",
-        url: "zatan"
+        url: "/list/zatan"
+      },
+      {
+        id: 9,
+        name: "简介",
+        url: "/page/about"
       }
     ]
 }

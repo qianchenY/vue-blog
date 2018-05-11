@@ -4,10 +4,10 @@
         <div class="ft-top box">
             <ul class="ft-nav">
                 <li class="ft-nav-item">
-                    <router-link to="" title="">首页</router-link>
+                    <router-link to="/" title="">首页</router-link>
                 </li>
                 <li class="ft-nav-item" v-for="item in navbar">
-                    <router-link to="" :title="item.name">{{ item.name }}</router-link>
+                    <router-link :to="item.url" :title="item.name">{{ item.name }}</router-link>
                 </li>
             </ul>
             <p class="ft-info">
@@ -43,6 +43,11 @@ export default {
     },
     computed: {
         ...mapState(["navbar"])
+    },
+    watch: {
+        '$route'(to, form){
+            console.log(to);
+        }
     },
     mounted(){
         new Wonder.Wonder({

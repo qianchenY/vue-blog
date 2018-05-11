@@ -1,28 +1,15 @@
 <template>
     <div>
-        <Header></Header>
-        <div class="main home box">
-            <div class="m-container">
-                <!-- .m-left start -->
-                <div class="m-left">
-                    <Article :articleData="articleData"></Article>
-                </div>
-                <!-- .m-left end -->
-                <MainRight></MainRight>   
-            </div>
-        </div>
-        <Footer></Footer>
+        <Article :articleData="articleData"></Article>    
     </div>
 </template>
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-import Header from './public/Header'
-import Footer from './public/Footer'
-import Article from './public/Article'
-import MainRight from './public/MainRight'
+import Article from './Article'
+
 export default {
-    name: "Home",
+    name: 'ArticleList',
     data(){
         return {
             // 文章数据
@@ -104,19 +91,16 @@ export default {
                     hearts: 0,
                     tags: 'javascript'
                 }
-            ]
+            ]            
         }
     },
     computed: {
-        ...mapState([])
+        ...mapState(['options'])
     },
     components: {
-        Header,
-        Footer,
-        Article,
-        MainRight
+        Article
     }
-} 
+}
 </script>
 
 <style lang="scss" scoped>

@@ -16,13 +16,13 @@
 			<div class="hd-nav-box box">
 				<ul class="hd-nav-list">
 					<li class="hd-nav-item">
-						<router-link class="current" to="" title="">首页</router-link>
+						<router-link :class="{'current': $route.path == '/'}" to="/" title="">首页</router-link>
 					</li>
 					<li class="hd-nav-item" v-for="item in navbar">
-						<router-link to="" :title="item.name">{{ item.name }}</router-link>
+						<router-link :class="{'current': $route.path == item.url}" :to="item.url" :title="item.name">{{ item.name }}</router-link>
 						<ul class="hd-subnav" v-if="item.child">
 							<li class="hd-subnav-item" v-for="citem in item.child">
-								<router-link to="" :title="citem.name">{{ citem.name }}</router-link>
+								<router-link :class="{'current': $route.path == citem.url}" :to="citem.url" :title="citem.name">{{ citem.name }}</router-link>
 							</li>
 						</ul>
 					</li>
