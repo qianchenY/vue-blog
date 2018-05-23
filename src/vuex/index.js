@@ -56,7 +56,7 @@ const state = {
       {
         id: 9,
         name: "简介",
-        url: "/page/about"
+        url: "/sort/about"
       }
     ]
 }

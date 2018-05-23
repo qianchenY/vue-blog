@@ -1,10 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import Page from '@/components/Page'
+
+// 列表页
 import List from '@/components/List'
+
+// 单页
+import Sort from '@/components/Sort'
 import About from '@/components/public/About'
-import ArticleList from '@/components/public/ArticleList'
+
+// 详情页
+import News from '@/components/News'
 
 Vue.use(Router)
 
@@ -19,30 +25,27 @@ export default new Router({
       }
     },
     {
-      path: '/page',
-      name: 'Page',
+      path: '/sort',
+      name: 'Sort',
       redirect: '/',
-      component: Page,
+      component: Sort,
       children: [
         {
-          path: ':sort',
-          name: 'About',
+          path: 'about',
+          name: 'SortContent',
           component: About
         }
       ]
     },
     {
-      path: '/list',
+      path: '/list/:sortid',
       name: 'List',
-      redirect: '/',
-      component: List,
-      children: [
-        {
-          path: ':sort',
-          name: 'ArticleList',
-          component: ArticleList
-        }
-      ]
+      component: List
+    },
+    {
+      path: '/news/:newsid',
+      name: 'News',
+      component: News
     }
   ]
 })

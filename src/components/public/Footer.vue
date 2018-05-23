@@ -50,10 +50,12 @@ export default {
         }
     },
     mounted(){
+        $("#wonder").css("height", $(document).innerHeight() - $('.ft').height());
+        
         new Wonder.Wonder({
             el: '#wonder',
-            dotsNumber: 200,
-            lineMaxLength: 300,
+            dotsNumber: 100,
+            lineMaxLength: 200,
             dotsAlpha: .5,
             speed: 1.5,
             clickWithDotsNumber: 5
@@ -132,7 +134,7 @@ export default {
     }
 
     #wonder{
-        position: fixed;
+        position: absolute;
         z-index: 0;
         top: 0;
         left: 0;

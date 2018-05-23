@@ -3,15 +3,15 @@
         <!-- .m-article start -->
         <ul class="m-article-list">
             <li class="list-item" v-for="item in articleData">
-                <router-link class="item-pic" to="" title="">
-                    <img :src="item.img ? item.img : options.defaultImg" alt="">
+                <router-link class="item-pic" :to="{ name: 'News', params: { newsid: item.id }}" :title="item.title">
+                    <img :src="item.img ? item.img : options.defaultImg" :alt="item.title">
                 </router-link>
                 <div class="item-font">
                     <p class="item-title">
-                        <router-link to="" title="">{{ item.title }}</router-link>
+                        <router-link :to="{ name: 'News', params: { newsid: item.id }}" :title="item.title">{{ item.title }}</router-link>
                     </p>
                     <p class="item-desc">
-                        <router-link to="" title="">{{ item.desc }}</router-link>
+                        <router-link :to="{ name: 'News', params: { newsid: item.id }}" :title="item.title">{{ item.desc }}</router-link>
                     </p>
                     <p class="item-info">
                         <span class="mr-5">

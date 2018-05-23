@@ -255,8 +255,7 @@ em,i{
 }	
 
 .m-desc{
-    font-size:16px;
-    font-size:1.6rem;
+    @include font-size(14);
     color:#333; 
     line-height: 24px;
 
@@ -269,29 +268,25 @@ em,i{
     }
     
     p{ 
-        font-size:16px;
-        font-size:1.6rem;
+        @include font-size(14);
         color:#333; 
         line-height: 24px; 
     }
     
     span{ 
-        font-size:16px;
-        font-size:1.6rem;
+        @include font-size(14);
         color:#333; 
         line-height: 24px; 
     }
     
     b{ 
-        font-size:22px;
-        font-size:2.2rem;
+        @include font-size(14);
         color:#333; 
-        line-height: 30px; 
+        line-height: 24px; 
     }
     
     a{ 
-        font-size:16px;
-        font-size:1.6rem;
+        @include font-size(14);
         color:$color; 
         line-height: 24px; 
     }
