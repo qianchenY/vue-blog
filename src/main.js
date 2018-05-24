@@ -4,9 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './vuex'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import 'font-awesome/css/font-awesome.min.css';
 
-// 引入字体图标
-import 'font-awesome/css/font-awesome.min.css'
+Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 

@@ -12,6 +12,10 @@ import About from '@/components/public/About'
 // 详情页
 import News from '@/components/News'
 
+// 后台
+import Admin from '@/components/admin'
+import InsertSort from '@/components/admin/InsertSort'
+
 Vue.use(Router)
 
 export default new Router({
@@ -46,6 +50,19 @@ export default new Router({
       path: '/news/:newsid',
       name: 'News',
       component: News
+    },
+    {
+      path: '/admin',
+      name: 'Admin',
+      redirect: '/',
+      component: Admin,
+      children: [
+        {
+          path: 'insertsort',
+          name: 'InsertSort',
+          component: InsertSort
+        }
+      ]
     }
   ]
 })
