@@ -80,7 +80,7 @@ Dots.prototype = {
  * Created by troyxu on 16/12/6.
  */
 function Wonder (opts) {
-
+    console.log(0);
     var part = document.querySelector(opts.el),
         canvas = document.createElement('canvas'),
         ctx = canvas.getContext('2d'),

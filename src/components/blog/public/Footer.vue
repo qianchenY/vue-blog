@@ -33,7 +33,6 @@
 
 <script>
 import { mapState,mapMutations } from 'vuex'
-import Wonder from '../../assets/js/canvas'
 export default {
     name: 'Footer',
     data(){
@@ -48,18 +47,6 @@ export default {
         '$route'(to, form){
             console.log(to);
         }
-    },
-    mounted(){
-        $("#wonder").css("height", $(document).innerHeight() - $('.ft').height());
-        
-        new Wonder.Wonder({
-            el: '#wonder',
-            dotsNumber: 100,
-            lineMaxLength: 200,
-            dotsAlpha: .5,
-            speed: 1.5,
-            clickWithDotsNumber: 5
-        })        
     }
 }
 </script>

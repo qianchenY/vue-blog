@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Header></Header>
         <div class="main home box">
             <div class="m-container">
                 <!-- .m-left start -->
@@ -12,17 +11,14 @@
                 <MainRight></MainRight>   
             </div>
         </div>          
-        <Footer></Footer>
     </div>
 </template>
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-import Header from './public/Header'
-import Footer from './public/Footer'
-import MainRight from './public/MainRight'
-import Article from './public/Article'
-import MainBread from './public/MainBread'
+import MainRight from '../public/MainRight'
+import Article from '../public/Article'
+import MainBread from '../public/MainBread'
 export default {
     name: 'List',
     data(){
@@ -113,8 +109,6 @@ export default {
         ...mapState(['options'])
     },
     components: {
-        Header,
-        Footer,
         MainRight,
         Article,
         MainBread

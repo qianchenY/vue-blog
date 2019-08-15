@@ -1,13 +1,34 @@
 <template>
-<div id="app">
+<div id="blog">
+    <Header></Header>
 	<router-view></router-view>
+    <Footer></Footer>
 </div>
 </template>
 
 <script>
+import Header from './public/Header'
+import Footer from './public/Footer'
+import Wonder from '../../assets/js/canvas'
 
 export default {
-    name: 'App'
+    name: 'blog',
+    components: {
+        Header,
+        Footer
+    },
+    mounted(){
+        $("#wonder").css("height", $(document).innerHeight() - $('.ft').height());
+        
+        new Wonder.Wonder({
+            el: '#wonder',
+            dotsNumber: 100,
+            lineMaxLength: 200,
+            dotsAlpha: .5,
+            speed: 1.5,
+            clickWithDotsNumber: 5
+        })        
+    }
 }
 </script>
 
